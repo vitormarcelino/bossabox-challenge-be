@@ -38,6 +38,14 @@ module.exports = {
     debug: Env.get('DB_DEBUG', false)
   },
 
+  sqlite_testing: {
+    client: 'sqlite3',
+    connection: {
+      filename: Helpers.databasePath(`sqlite_testing.sqlite`)
+    },
+    useNullAsDefault: true
+  },
+
   /*
   |--------------------------------------------------------------------------
   | MySQL
